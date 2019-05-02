@@ -4,20 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HTextEditorWPF"
+        xmlns:src="clr-namespace:HTextEditorWPF.Helpers"
         mc:Ignorable="d"
         Title="{Binding WindowTitleText}" Height="450" Width="800">
     <Border Margin="15">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="0.1*" />
+                <ColumnDefinition Width="10" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
             <!-- A test textbox -->
-            <TextBox Padding="10" FontSize="18" AcceptsReturn="True" AcceptsTab="True" AutoWordSelection="True" TextWrapping="Wrap" Grid.Column="0" Text="{Binding EditorText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-            <!-- A test textblock -->
-            <TextBlock Padding="10" FontSize="18" Grid.Column="2" Text="{Binding EditorText, Mode=OneWay}" />
+            <TextBox Padding="10" FontSize="24" AcceptsReturn="True" AcceptsTab="True" AutoWordSelection="True" TextWrapping="Wrap" Grid.Column="0" Text="{Binding EditorText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <!-- A test browser -->
+            <WebBrowser Grid.Column="2" AllowDrop="False" src:WebBrowserBehavior.DisableJavascriptErrors="True" src:WebBrowserHelper.Body="{Binding EditorText, Mode=OneWay}"></WebBrowser>
         </Grid>
     </Border>
 </Window>
