@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HTextEditorWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="{Binding WindowTitleText}" Height="450" Width="800">
+    <Border Margin="15">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.1*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <!-- A test textbox -->
+            <TextBox Padding="10" FontSize="18" AcceptsReturn="True" AcceptsTab="True" AutoWordSelection="True" TextWrapping="Wrap" Grid.Column="0" Text="{Binding EditorText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <!-- A test textblock -->
+            <TextBlock Padding="10" FontSize="18" Grid.Column="2" Text="{Binding EditorText, Mode=OneWay}" />
+        </Grid>
+    </Border>
 </Window>
