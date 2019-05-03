@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HTextEditorWPF.Styles">
+    
+    <!-- Colors to be used across the app -->
+    
+    <!-- Background colors -->
+    <Color x:Key="BackgroundLight">#EFEFEF</Color>
+    <SolidColorBrush x:Key="BackgroundLightBrush" Color="{StaticResource BackgroundLight}" />
+
+    <Color x:Key="BackgroundVeryLight">#FAFAFA</Color>
+    <SolidColorBrush x:Key="BackgroundVeryLightBrush" Color="{StaticResource BackgroundVeryLight}" />
+
+    <Color x:Key="BackgroundDark">#353535</Color>
+    <SolidColorBrush x:Key="BackgroundDarkBrush" Color="{StaticResource BackgroundDark}" />
+
+    <Color x:Key="BackgroundBlack">#000000</Color>
+    <SolidColorBrush x:Key="BackgroundBlackBrush" Color="{StaticResource ForegroundBlack}" />
+
+    <Color x:Key="BackgroundWhite">#FFFFFF</Color>
+    <SolidColorBrush x:Key="BackgroundWhiteBrush" Color="{StaticResource ForegroundWhite}" />
+    
+    <!-- Foreground colors -->
+    <Color x:Key="ForegroundMain">#686868</Color>
+    <SolidColorBrush x:Key="ForegroundMainBrush" Color="{StaticResource ForegroundMain}" />
+
+    <Color x:Key="ForegroundBlack">#000000</Color>
+    <SolidColorBrush x:Key="ForegroundBlackBrush" Color="{StaticResource ForegroundBlack}" />
+
+    <Color x:Key="ForegroundWhite">#FFFFFF</Color>
+    <SolidColorBrush x:Key="ForegroundWhiteBrush" Color="{StaticResource ForegroundWhite}" />
+
+    <Color x:Key="ForegroundDark">#252525</Color>
+    <SolidColorBrush x:Key="ForegroundDarkBrush" Color="{StaticResource ForegroundDark}" />
+
+    <!-- Dark theme colors -->
+    <Color x:Key="DarkThemeVeryDark">#0B0C10</Color>
+    <SolidColorBrush x:Key="DarkThemeVeryDarkBrush" Color="{StaticResource DarkThemeVeryDark}" />
+
+    <Color x:Key="DarkThemeDark">#1F2833</Color>
+    <SolidColorBrush x:Key="DarkThemeDarkBrush" Color="{StaticResource DarkThemeDark}" />
+
+    <Color x:Key="DarkThemeGray">#C5C6C7</Color>
+    <SolidColorBrush x:Key="DarkThemeGrayBrush" Color="{StaticResource DarkThemeGray}" />
+
+    <Color x:Key="DarkThemeLightBlue">#66FCF1</Color>
+    <SolidColorBrush x:Key="DarkThemeLightBlueBrush" Color="{StaticResource DarkThemeLightBlue}" />
+
+    <Color x:Key="DarkThemeDarkBlue">#45A29E</Color>
+    <SolidColorBrush x:Key="DarkThemeDarkBlueBrush" Color="{StaticResource DarkThemeDarkBlue}" />
+
+    <!-- Light theme colors -->
+    <Color x:Key="LightThemeDarkGreen">#00887A</Color>
+    <SolidColorBrush x:Key="LightThemeDarkGreenBrush" Color="{StaticResource LightThemeDarkGreen}" />
+
+    <Color x:Key="LightThemePink">#FFCCBC</Color>
+    <SolidColorBrush x:Key="LightThemePinkBrush" Color="{StaticResource LightThemePink}" />
+
+    <Color x:Key="LightThemeWhite">#FFFFFF</Color>
+    <SolidColorBrush x:Key="LightThemeWhiteBrush" Color="{StaticResource LightThemeWhite}" />
+
+    <Color x:Key="LightThemeLightBlue">#D3E3FC</Color>
+    <SolidColorBrush x:Key="LightThemeLightBlueBrush" Color="{StaticResource LightThemeLightBlue}" />
+
+    <Color x:Key="LightThemeDarkBlue">#77A6F7</Color>
+    <SolidColorBrush x:Key="LightThemeDarkBlueBrush" Color="{StaticResource LightThemeDarkBlue}" />
+</ResourceDictionary>
