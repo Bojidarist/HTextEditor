@@ -64,7 +64,7 @@ namespace HTextEditorWPF.ViewModels
             // Set the current window
             this.CurrentWindow = window;
 
-            // Listen for event window state change
+            // Listen for StateChanged event
             this.CurrentWindow.StateChanged += CurrentWindow_StateChanged;
 
             // Initialize commands
@@ -81,7 +81,7 @@ namespace HTextEditorWPF.ViewModels
         private void CurrentWindow_StateChanged(object sender, EventArgs e)
         {
             // A message box for testing
-            MessageBox.Show(CurrentWindow.WindowState.ToString());
+            MessageBox.Show(this.CurrentWindow.WindowState.ToString());
         }
         #endregion
     }
