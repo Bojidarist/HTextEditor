@@ -41,7 +41,8 @@
             <!-- A test button-->
             <Button Style="{StaticResource LightThemeDefaultButton}"
                     Content="Click" Grid.Column="0" Grid.Row="1" 
-                    Height="25" Margin="0,0,10,0" />
+                    Height="25" Margin="0,0,10,0"
+                    Command="{Binding TestMessageCommand}"/>
         </Grid>
     </Border>
 </Window>

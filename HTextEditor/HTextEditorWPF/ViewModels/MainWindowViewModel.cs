@@ -1,6 +1,7 @@
 ﻿using HTextEditorWPF.ViewModels.Base;
 using System;
 using System.Windows;
+using System.Windows.Input;
 
 namespace HTextEditorWPF.ViewModels
 {
@@ -10,6 +11,10 @@ namespace HTextEditorWPF.ViewModels
         private string _previewBrowserSource;
         private string _editorText;
         private string _windowTitleText = "Title";
+
+        /// <summary>
+        /// The current window
+        /// </summary>
         private Window CurrentWindow { get; set; }
         #endregion
 
@@ -35,18 +40,35 @@ namespace HTextEditorWPF.ViewModels
         /// <summary>
         /// This is used to navigate the browser to specific page.
         /// </summary>
-        public string PreviewBrowserSource { get { return _previewBrowserSource; }
-            set { _previewBrowserSource = value; } }
+        public string PreviewBrowserSource
+        {
+            get { return _previewBrowserSource; }
+            set { _previewBrowserSource = value; }
+        }
         #endregion
 
-        #region Constructor
+        #region Commands
+        /// <summary>
+        /// A test command
+        /// </summary>
+        public ICommand TestMessageCommand { get; set; }
+        #endregion
+
+        #region Constructors
         /// <summary>
         /// Default constructor
         /// </summary>
         /// <param name="window">Set the current window</param>
         public MainWindowViewModel(Window window)
         {
+            // Set the current window
             this.CurrentWindow = window;
+
+            // Listen for event window state change
+            this.CurrentWindow.StateChanged += CurrentWindow_StateChanged;
+
+            // Initialize commands
+            this.TestMessageCommand = new RelayCommand(() => MessageBox.Show("Test", "Test", MessageBoxButton.OK));
         }
         #endregion
 
@@ -56,9 +78,10 @@ namespace HTextEditorWPF.ViewModels
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CurrentWindow_StateChanged(object sender,EventArgs e)
+        private void CurrentWindow_StateChanged(object sender, EventArgs e)
         {
-            
+            // A message box for testing
+            MessageBox.Show(CurrentWindow.WindowState.ToString());
         }
         #endregion
     }
